@@ -1,0 +1,96 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing:border-box;
+}
+
+body{
+    max-width: 1200px;
+}
+.padre{  /* div que agrupa header, section i footer*/
+            /*posem un display-flex al contenidor perquè tots els seus elements siguin flexibles.  */
+       
+     display: flex;       
+     flex-flow: column nowrap;           
+
+}
+
+    .header{ /*repetim el procés anterior al header per evitar que el menu i el text principal es posin un al costat de l'altre.*/
+        background:url(../imagenes/header.jpg);
+        background-position: center;
+        background-attachment: contain;/*REVISAR*/
+        background-size: cover;/*REVISAR*/
+
+
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{ /* cal posar els elements fills un al costat de l'altre. I després ajustar el tamany.*/
+          background-color:blueviolet;
+          display: flex;
+          flex-flow: nowrap;
+        }
+            .logo{
+                background-color:crimson;
+                flex: 1 1 auto;
+            }
+            .nav{
+                background-color:crimson;
+                flex: 5 1 auto;
+            }
+            .social{
+                background-color:crimson;
+                flex: 1 1 auto;
+            }
+        .texto-principal{
+          background-color: chocolate;
+        }
+            h1{
+                background-color: yellow;
+            }
+    .section{
+        background: black;
+        display: flex;
+    }
+        .articulos{
+            background-color: violet;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;  /*els elements fills s'ajustaran en fila. */
+        }
+            .article{ /*inclou els 4 articles. Si posem el tamany adequat s'ajustaran gràcies al row wrap que hem posat al pare.*/
+              background-color: blue;  
+              flex: 1 1 40%;
+            }
+            .navegacion{
+                background-color: cornflowerblue;
+                flex: 1 1 100%; 
+            }
+        .aside{
+            background-color: crimson;
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background-color: darkgoldenrod;
+            }
+    .footer{
+        background: black;
+    }
+        .pie{
+            background-color: yellow;
+        }
+@media all and (max-width:768px){
+    .section{
+        flex-direction: column;
+        background-color: yellow;
+    }
+        
+}
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+    }
+}
