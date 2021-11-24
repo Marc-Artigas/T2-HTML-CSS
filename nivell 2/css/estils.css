@@ -1,5 +1,5 @@
 *{
-    margin: 0px;
+    
     padding: 10px;
     box-sizing:border-box;
 }
@@ -41,13 +41,20 @@ a{
                 .logo a img{
                     width:100%;
                 }
+                .logo a img:hover{
+                    background-color: #0074a7;
+                }
             .nav{             
                 flex: 5 1 auto;
                 text-align: center;
             }
                 .nav a{
+                    color:rgb(53, 51, 51);
                     font-size: 15px;
                     padding:0 10px;
+                }
+                .nav a:hover{
+                    background-color: #0074a7;
                 }
                 
             .social{
@@ -59,6 +66,9 @@ a{
                 .social a{
                     font-size: 18px;
                     color:rgb(53, 51, 51);
+                }
+                .social a:hover{
+                    background-color: #0074a7;
                 }
         .texto-principal{
           
@@ -96,10 +106,19 @@ a{
                 .article img{
                     width: 100%;
                 }
+                .article a:hover{
+                    background-color: #0074a7;
+                }
             .navegacion{              
                 flex: 1 1 100%; 
                 text-align: center;
             }
+                .navegacion a{
+                    color:rgb(32, 31, 31);                   
+                }
+                .navegacion a:hover{
+                    background-color: #0074a7;
+                }
         .aside{
             background-color: darkgray;
             flex: 1 1 auto;
@@ -109,17 +128,28 @@ a{
                 justify-content: center;
             }
     .footer{
-        background: black;
+        margin-top: 5px;
+        background:rgb(161, 156, 156);
     }
         .pie{
-            background-color: yellow;
+            background-color: rgb(235, 217, 217);
+            text-align: center;
         }
+            .pie a{
+            color:rgb(131, 125, 125);
+        }
+            .pie a:hover{
+            background-color: #0074a7;
+        }
+
 @media all and (max-width:768px){
     .section{
         flex-direction: column;
-        background-color: yellow;
-    }
         
+    }
+    .texto-principal h1{
+        text-align: center;       
+    }
 }
 @media all and (max-width: 600px){
     .articulos{
@@ -128,4 +158,9 @@ a{
     .menu{
         flex-direction: column;
     }
+    .social a{
+        font-size: 18px;
+        color:rgb(13, 179, 143);
+    }
+    
 }
