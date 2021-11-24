@@ -26,6 +26,7 @@ a{
         background-size: cover;
         display: flex;
         flex-flow: column nowrap;
+        margin-bottom:1px;
     }
         .menu{ /* cal posar els elements fills un al costat de l'altre. I després ajustar el tamany.*/
           background:rgba(165,170,169,0.1);  
@@ -37,21 +38,27 @@ a{
                 flex: 1 1 auto;
                 box-sizing: border-box;   
             }
-                .logo img{
+                .logo a img{
                     width:100%;
                 }
             .nav{             
                 flex: 5 1 auto;
                 text-align: center;
             }
+                .nav a{
+                    font-size: 15px;
+                    padding:0 10px;
+                }
                 
             .social{
                 
                 flex:1 1 auto;
                 display:flex;
+                text-align: center; 
             }
                 .social a{
-                    padding: 0 5px;
+                    font-size: 18px;
+                    color:rgb(53, 51, 51);
                 }
         .texto-principal{
           
@@ -63,29 +70,43 @@ a{
                 }
             
     .section{
-        background: black;
+        background: darkgray;
         display: flex;
     }
         .articulos{
-            background-color: violet;
+            background-color: darkgray;
             flex: 2 1 auto;
             display: flex;
             flex-flow: row wrap;  /*els elements fills s'ajustaran en fila. */
         }
             .article{ /*inclou els 4 articles. Si posem el tamany adequat s'ajustaran gràcies al row wrap que hem posat al pare.*/
-              background-color: blue;  
+              background-color: white;  
               flex: 1 1 40%;
+              margin: 5px;
             }
-            .navegacion{
-                background-color: cornflowerblue;
+                .article h2{
+                    background-color: rgb(231, 118, 140);
+                    color:white;
+                    text-transform: uppercase;
+                }
+                .article h3{
+                    margin-top: -50px;
+                    color:rgb(238, 238, 119); 
+                }
+                .article img{
+                    width: 100%;
+                }
+            .navegacion{              
                 flex: 1 1 100%; 
+                text-align: center;
             }
         .aside{
-            background-color: crimson;
+            background-color: darkgray;
             flex: 1 1 auto;
         }
             .publicidad{
-                background-color: darkgoldenrod;
+                text-align: center;
+                justify-content: center;
             }
     .footer{
         background: black;
