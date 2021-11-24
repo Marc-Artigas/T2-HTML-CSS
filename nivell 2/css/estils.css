@@ -1,11 +1,15 @@
 *{
-    margin: 10px;
+    margin: 0px;
     padding: 10px;
     box-sizing:border-box;
 }
 
 body{
     max-width: 1200px;
+    margin: auto;
+}
+a{
+    text-decoration: none;
 }
 .padre{  /* div que agrupa header, section i footer*/
             /*posem un display-flex al contenidor perquè tots els seus elements siguin flexibles.  */
@@ -18,36 +22,46 @@ body{
     .header{ /*repetim el procés anterior al header per evitar que el menu i el text principal es posin un al costat de l'altre.*/
         background:url(../imagenes/header.jpg);
         background-position: center;
-        background-attachment: contain;/*REVISAR*/
-        background-size: cover;/*REVISAR*/
-
-
+        background-attachment: contain;
+        background-size: cover;
         display: flex;
         flex-flow: column nowrap;
     }
         .menu{ /* cal posar els elements fills un al costat de l'altre. I després ajustar el tamany.*/
-          background-color:blueviolet;
+          background:rgba(165,170,169,0.1);  
           display: flex;
           flex-flow: nowrap;
+          align-items: center;
         }
-            .logo{
-                background-color:crimson;
+            .logo{               
                 flex: 1 1 auto;
+                box-sizing: border-box;   
             }
-            .nav{
-                background-color:crimson;
+                .logo img{
+                    width:100%;
+                }
+            .nav{             
                 flex: 5 1 auto;
+                text-align: center;
             }
+                
             .social{
-                background-color:crimson;
-                flex: 1 1 auto;
+                
+                flex:1 1 auto;
+                display:flex;
             }
+                .social a{
+                    padding: 0 5px;
+                }
         .texto-principal{
-          background-color: chocolate;
+          
         }
-            h1{
-                background-color: yellow;
-            }
+                .texto-principal h1{
+                    display: flex;
+                    color:rgba(245, 181, 63, 0.5);
+                    justify-content: center;
+                }
+            
     .section{
         background: black;
         display: flex;
